@@ -12,11 +12,13 @@ function Usuarios() {
         navigate(`/editar/${id}`); // Redirigir a la ruta de edición
     };
 
+    const URL = process.env.REACT_APP_API_URL_SERVER_GET;
+
     useEffect(() => {
 
             const obtenerUsuarios = async () => {
                 try {
-                const respuesta = await axios.get('http://localhost:9000/user/');
+                const respuesta = await axios.get(URL);
                 setUsuarios(respuesta.data);
 
             } catch (error) {
