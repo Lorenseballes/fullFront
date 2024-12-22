@@ -7,7 +7,7 @@ function EditarFormulario() {
     const { id } = useParams(); // Obtener el ID desde la URL
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    //const [password, setPassword] = useState('');
     const [plan, setPlan] = useState('');
     const [sociedad, setSociedad] = useState('');
 
@@ -34,7 +34,7 @@ function EditarFormulario() {
         const updatedUser = {
             nombre,
             email,
-            password,
+            //password,
             plan,
             sociedad,
         };
@@ -46,7 +46,7 @@ function EditarFormulario() {
                 // Vaciar los campos después de guardar
             setNombre('');
             setEmail('');
-            setPassword('');
+            //setPassword('');
             setPlan('');
             setSociedad('');
             
@@ -79,16 +79,6 @@ function EditarFormulario() {
                         required
                     />
                 </Form.Group>
-                <Form.Group className="mb-4" controlId="password">
-                    <Form.Label className="fw-bold">Password</Form.Label>
-                    <Form.Control
-                        type="password" 
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        placeholder="password"
-                        required
-                    />
-                </Form.Group>
                 <Form.Group className="mb-4" controlId="plan">
                     <Form.Label className="fw-bold">Seleccionar plan</Form.Label>
                     <select 
@@ -118,7 +108,7 @@ function EditarFormulario() {
                     <Button variant="outline-warning" className='mt-4' onClick={() => {
                     setNombre('');
                     setEmail('');
-                    setPassword('');
+                    //setPassword('');
                     setPlan('');
                     setSociedad(''); 
                     }}>Limpiar Campos</Button>

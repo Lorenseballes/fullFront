@@ -18,7 +18,7 @@ function Usuarios() {
 
             const obtenerUsuarios = async () => {
                 try {
-                const respuesta = await axios.get('${process.env.REACT_APP_API_URL_SERVER_GET}');
+                const respuesta = await axios.get(`${process.env.REACT_APP_API_URL_SERVER_GET}`);
                 setUsuarios(respuesta.data);
 
             } catch (error) {
