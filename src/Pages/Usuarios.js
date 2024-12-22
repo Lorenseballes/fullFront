@@ -12,13 +12,13 @@ function Usuarios() {
         navigate(`/editar/${id}`); // Redirigir a la ruta de edición
     };
 
-    const URL = process.env.REACT_APP_API_URL_SERVER_GET;
+    //const URL = process.env.REACT_APP_API_URL_SERVER_GET;
 
     useEffect(() => {
 
             const obtenerUsuarios = async () => {
                 try {
-                const respuesta = await axios.get(URL);
+                const respuesta = await axios.get('${process.env.REACT_APP_API_URL_SERVER_GET}');
                 setUsuarios(respuesta.data);
 
             } catch (error) {
@@ -33,7 +33,7 @@ function Usuarios() {
 
             obtenerUsuarios();
 
-    }, [Usuarios]);
+    }, []);
 
     const eliminarUsuario = async (id) => {
 
