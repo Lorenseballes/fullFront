@@ -12,7 +12,7 @@ function Login({ setAuthenticated }) {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:9000/login', { email, password },);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL_SERVER_POST}`, { email, password },);
             if (response.data && response.data.token) {
                 setAuthenticated(true); // Cambiar el estado de autenticación
                 alert('Inicio de sesión exitoso');

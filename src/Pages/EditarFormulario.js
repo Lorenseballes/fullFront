@@ -14,7 +14,7 @@ function EditarFormulario() {
     // Cargar los datos del usuario al montar el componente
     useEffect(() => {
         // Obtener los datos del usuario desde la API
-        axios.get(`http://localhost:9000/user/${id}`)
+        axios.get(`${process.env.REACT_APP_API_URL_SERVER_GET}${id}`)
             .then((response) => {
                 const usuario = response.data;
                 setNombre(usuario.nombre);
@@ -40,7 +40,7 @@ function EditarFormulario() {
         };
 
         // Enviar los datos modificados a la API
-        axios.put(`http://localhost:9000/user/${id}`, updatedUser)
+        axios.put(`${process.env.REACT_APP_API_URL_SERVER_PUT}${id}`, updatedUser)
             .then((response) => {
                 console.log('Usuario actualizado correctamente');
                 // Vaciar los campos después de guardar
