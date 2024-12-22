@@ -14,7 +14,7 @@ function EditarFormulario() {
     // Cargar los datos del usuario al montar el componente
     useEffect(() => {
         // Obtener los datos del usuario desde la API
-        axios.get(`${process.env.REACT_APP_API_URL_SERVER_GET}${id}`)
+        axios.get(`${process.env.REACT_APP_API_URL_SERVER_GET}/${id}`)
             .then((response) => {
                 const usuario = response.data;
                 setNombre(usuario.nombre);
@@ -40,7 +40,7 @@ function EditarFormulario() {
         };
 
         // Enviar los datos modificados a la API
-        axios.put(`${process.env.REACT_APP_API_URL_SERVER_PUT}${id}`, updatedUser)
+        axios.put(`${process.env.REACT_APP_API_URL_SERVER_PUT}/${id}`, updatedUser)
             .then((response) => {
                 console.log('Usuario actualizado correctamente');
                 // Vaciar los campos después de guardar
@@ -59,9 +59,10 @@ function EditarFormulario() {
     return (
         <div className="d-flex container mt-5">
             <Form className="w-75 shadow-lg p-4 rounded" onSubmit={handleSubmit}>
-                <Form.Group className="mb-4" controlId="nombre">
+                <Form.Group className="mb-4" htmlFor="nombre">
                     <Form.Label className="fw-bold">Nombre</Form.Label>
-                    <Form.Control 
+                    <Form.Control
+                    id="nombre" 
                         type="text" 
                         value={nombre}
                         onChange={(e) => setNombre(e.target.value)} 
@@ -69,9 +70,10 @@ function EditarFormulario() {
                         required
                     />
                 </Form.Group>
-                <Form.Group className="mb-4" controlId="email">
+                <Form.Group className="mb-4" htmlFor="email">
                     <Form.Label className="fw-bold">Email</Form.Label>
                     <Form.Control 
+                    id="email"
                         type="email" 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -79,10 +81,10 @@ function EditarFormulario() {
                         required
                     />
                 </Form.Group>
-                <Form.Group className="mb-4" controlId="plan">
+                <Form.Group className="mb-4" htmlFor="plan">
                     <Form.Label className="fw-bold">Seleccionar plan</Form.Label>
                     <select 
-                        id="inputState" 
+                        id="plan" 
                         className="form-select" 
                         value={plan} 
                         onChange={(e) => setPlan(e.target.value)} 
@@ -93,9 +95,10 @@ function EditarFormulario() {
                         <option value="3 veces por semana">3 veces por semana</option>
                     </select>
                 </Form.Group>
-                <Form.Group className="mb-4" controlId="sociedad">
+                <Form.Group className="mb-4" htmlFor="sociedad">
                     <Form.Label className="fw-bold">Sociedad Médica</Form.Label>
-                    <Form.Control 
+                    <Form.Control
+                    id="sociedad" 
                         type="text" 
                         value={sociedad}
                         onChange={(e) => setSociedad(e.target.value)} 

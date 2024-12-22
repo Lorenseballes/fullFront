@@ -40,7 +40,7 @@ function Usuarios() {
         console.log(id);
         
         try {
-            const respuesta = await axios.delete(`${process.env.REACT_APP_API_URL_SERVER_DELETE}${id}`);
+            const respuesta = await axios.delete(`${process.env.REACT_APP_API_URL_SERVER_DELETE}/${id}`);
             setUsuarios(usuarios.filter(usuario => usuario._id !== id));
             console.log(respuesta);
 
