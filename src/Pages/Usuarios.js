@@ -33,9 +33,7 @@ function Usuarios() {
 
             obtenerUsuarios();
 
-            //console.log(usuarios);
-
-    }, []);
+    }, [Usuarios]);
 
     const eliminarUsuario = async (id) => {
 
