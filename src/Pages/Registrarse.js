@@ -70,9 +70,10 @@ function Formulario() {
         </h1>
         <div className='d-flex container mt-5 '>
             <Form className='w-75 shadow-lg p-4 rounded' onSubmit={handleSubmit}>
-                <Form.Group className="mb-5" controlId="nombre">
+                <Form.Group className="mb-5" htmlFor="nombre">
                     <Form.Label className="fw-bold">Nombre</Form.Label>
                     <Form.Control 
+                        id="nombre"
                         type="text" 
                         value={nombre}
                         onChange={(e) => setNombre(e.target.value)} 
@@ -80,9 +81,10 @@ function Formulario() {
                         required
                         />
                 </Form.Group>
-                <Form.Group className="mb-5" controlId="email">
+                <Form.Group className="mb-5" htmlFor="email">
                     <Form.Label className="fw-bold ">Email</Form.Label>
                     <Form.Control
+                    id="email"
                         type="email" 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -90,9 +92,10 @@ function Formulario() {
                         required
                         />
                 </Form.Group>
-                <Form.Group className="mb-5" controlId="password">
+                <Form.Group className="mb-5" htmlFor="password">
                     <Form.Label className="fw-bold" >Password</Form.Label>
                     <Form.Control
+                    id="password"
                         type="password" 
                         value={password}
                         onChange={(e) =>setPassword(e.target.value)}
@@ -100,10 +103,10 @@ function Formulario() {
                         required
                         />
                 </Form.Group>
-                <Form.Group className="mb-5" controlId="plan">
-                <Form.Label htmlFor="inputState" className="fw-bold">Seleccionar plan</Form.Label>
+                <Form.Group className="mb-5" htmlFor="plan">
+                <Form.Label  className="fw-bold">Seleccionar plan</Form.Label>
                     <select  
-                    id="inputState" 
+                    id="plan" 
                     className="form-select" 
                     value={plan}
                     onChange={(e) => setPlan(e.target.value)} 
@@ -114,9 +117,10 @@ function Formulario() {
                         <option value="3 veces por semana">3 veces por semana</option>
                     </select>
                 </Form.Group>
-                <Form.Group className="mb-5" controlId="sociedad">
+                <Form.Group className="mb-5" htmlFor="sociedad">
                     <Form.Label className="fw-bold">Sociedad Médica</Form.Label>
                     <Form.Control 
+                    id="sociedad"
                         type="text" 
                         value={sociedad}
                         onChange={(e) => setSociedad(e.target.value)} 
