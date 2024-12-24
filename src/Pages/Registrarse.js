@@ -19,6 +19,7 @@ function Formulario() {
         
         try {
 
+            console.log('URL del endpoint:', process.env.REACT_APP_API_URL_SERVER_POST);
             await axios.post(`${process.env.REACT_APP_API_URL_SERVER_POST}`, {
                 nombre,
                 email,
