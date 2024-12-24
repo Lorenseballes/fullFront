@@ -41,7 +41,6 @@ function Usuarios() {
         
         try {
             const respuesta = await axios.delete(`${process.env.REACT_APP_API_URL_SERVER_DELETE}/${id}`);
-            console.log(respuesta);
             setUsuarios(usuarios.filter(usuario => usuario._id !== id));
             console.log(respuesta);
 
