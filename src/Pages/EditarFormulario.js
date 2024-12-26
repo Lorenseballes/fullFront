@@ -41,7 +41,7 @@ function EditarFormulario() {
 
         // Enviar los datos modificados a la API
 
-        axios.put(`${process.env.REACT_APP_API_URL_SERVER_PUT}/editar/${id}`, updatedUser)
+        axios.put(`${process.env.REACT_APP_API_URL_SERVER_PUT}/${id}`, updatedUser)
             .then((response) => {
                 console.log('Usuario actualizado correctamente');
                 // Vaciar los campos después de guardar
