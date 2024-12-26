@@ -9,7 +9,7 @@ function Usuarios() {
     const [usuarios, setUsuarios] = useState([]);
     const navigate = useNavigate(); // Inicializar el hook
     const handleEditar = (id) => {
-        navigate(`/editar/${id}`); // Redirigir a la ruta de edición
+        navigate(`/${id}`); // Redirigir a la ruta de edición
     };
 
     //const URL = process.env.REACT_APP_API_URL_SERVER_GET;
