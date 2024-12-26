@@ -8,7 +8,7 @@ function Usuarios() {
 
     const [usuarios, setUsuarios] = useState([]);
     const navigate = useNavigate(); // Inicializar el hook
-    const handleEditar = (id) => {
+    const EditarFormulario = (id) => {
         navigate(`/editar/${id}`); // Redirigir a la ruta de edición
     };
 
@@ -100,7 +100,7 @@ function Usuarios() {
                                 <td>{usuario.sociedad}</td>
                                 <td>
                                 <button className="btn btn-outline-warning me-2"
-                                        onClick={() => handleEditar(usuario._id)}> Editar 
+                                        onClick={() => EditarFormulario(usuario._id)}> Editar 
                                 </button>
                                 <button
                                         className='btn btn-danger'
