@@ -20,7 +20,7 @@ const Navegacion = () => {
         <Link className="text-reset text-decoration-none mx-2" to="/ecommerce">Ecommerce</Link>
         <Link className="text-reset text-decoration-none mx-2" to="/contacto">Contacto</Link>
         <Link className="text-reset text-decoration-none mx-2" to="/nosotros">Nosotros</Link>
-        <Link className="text-reset text-decoration-none mx-2" to="/registrarse">Registrarse</Link>
+        <Link className="text-reset text-decoration-none mx-2" to="/user/register">Registrarse</Link>
         <Link className="text-reset text-decoration-none mx-2" to="/usuarios">Usuarios</Link>
         <Link className="text-reset text-decoration-none mx-2" to="/login">Login</Link>
         <Link to="/carrito"><i class="bi bi-cart-check-fill"></i></Link>
